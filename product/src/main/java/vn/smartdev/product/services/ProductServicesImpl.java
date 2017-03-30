@@ -20,9 +20,6 @@ import vn.smartdev.product.exception.*;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 29/11/2016.
- */
 @Service
 public class ProductServicesImpl implements ProductServices {
     private static final Logger logger = LoggerFactory.getLogger(ProductServicesImpl.class);

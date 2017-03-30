@@ -6,9 +6,6 @@ import vn.smartdev.user.exception.UserNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by levuhuy on 30/12/2016.
- */
 public interface UserService {
     User findUserByUsernameService(String username);
     User findUserByIdService(String userId);

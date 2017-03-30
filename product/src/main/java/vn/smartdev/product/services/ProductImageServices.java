@@ -5,9 +5,6 @@ import vn.smartdev.product.dao.model.ProductModel;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 03/12/2016.
- */
 public interface ProductImageServices {
     List<ProductImage> getListProductImage();
     ProductImage getProductImage(String id);

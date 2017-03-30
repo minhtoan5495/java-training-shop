@@ -10,10 +10,6 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.UUID;
 
-
-/**
- * Created by levuhuy on 12/14/16.
- */
 public class UserModel extends AbstractAuditableEntity<String> implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -2,6 +2,7 @@ package vn.smartdev.user.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vn.smartdev.user.dao.entity.User;
 import vn.smartdev.user.dao.repository.UserRepository;
 import vn.smartdev.user.exception.UserAlreadyExistsException;
@@ -9,14 +10,11 @@ import vn.smartdev.user.exception.UserNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by levuhuy on 30/12/2016.
- */
-@Component
+@Service
 public class UserManagerImpl implements UserManager {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Override
     public User findUserByUsername(String username) throws UserNotFoundException {

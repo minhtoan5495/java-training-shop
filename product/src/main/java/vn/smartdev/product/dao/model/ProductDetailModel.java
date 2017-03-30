@@ -1,12 +1,9 @@
 package vn.smartdev.product.dao.model;
 
-import javax.persistence.Column;
-
-/**
- * Created by Nhat on 07/12/2016.
- */
 public class ProductDetailModel {
+
     private String id;
+
     private String description;
 
     private String productDetailName;

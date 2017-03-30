@@ -6,15 +6,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import vn.smartdev.invoice.dao.repository.InvoiceDetailRepository;
 
-/**
- * Created by nxmt on 26/12/2016.
- */
 public class InvoiceDetailManagerImplTest {
+
     @InjectMocks
-    InvoiceDetailManagerImpl invoiceDetailManagerImpl;
+    private InvoiceDetailManagerImpl invoiceDetailManagerImpl;
 
     @Mock
-    InvoiceDetailRepository invoiceDetailRepository;
+    private InvoiceDetailRepository invoiceDetailRepository;
 
     @Before
     public void setUp() throws Exception {

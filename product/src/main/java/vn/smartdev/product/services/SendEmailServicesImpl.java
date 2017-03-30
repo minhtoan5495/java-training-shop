@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 import vn.smartdev.product.dao.repository.SendEmail;
 import vn.smartdev.product.services.SendEmailServices;
 
-/**
- * Created by Nhat on 28/12/2016.
- */
 @Service
 public class SendEmailServicesImpl implements SendEmailServices{
     @Autowired

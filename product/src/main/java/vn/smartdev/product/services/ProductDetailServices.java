@@ -7,9 +7,6 @@ import vn.smartdev.product.exception.ProductNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 29/11/2016.
- */
 public interface ProductDetailServices {
     List<ProductDetail> getListProductDetail();
     ProductDetail getProductDetail(String id);

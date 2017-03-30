@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface RoleManager {
     List<Role> getAll() throws RoleNotFoundException;
-    Role findRoleByName(String rolename) throws RoleNotFoundException;
+    Role findRoleByName(String roleName) throws RoleNotFoundException;
 }

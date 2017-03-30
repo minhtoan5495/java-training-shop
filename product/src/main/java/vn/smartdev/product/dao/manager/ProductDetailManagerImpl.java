@@ -2,6 +2,7 @@ package vn.smartdev.product.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vn.smartdev.category.dao.entity.Category;
 import vn.smartdev.category.dao.repository.CategoryRepository;
 import vn.smartdev.product.dao.entity.Product;
@@ -16,17 +17,11 @@ import vn.smartdev.product.exception.ProductDetailAlreadyException;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 26/12/2016.
- */
-@Component
+@Service
 public class ProductDetailManagerImpl implements ProductDetailManager{
     @Autowired
     private ProductDetailRepository productDetailRepository;
-    @Autowired
-    private ProductImageRepository productImageRepository;
-    @Autowired
-    private CategoryRepository categoryRepository;
+
     @Autowired
     private ProductRepository productRepository;
 

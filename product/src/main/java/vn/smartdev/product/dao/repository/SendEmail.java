@@ -1,18 +1,8 @@
 package vn.smartdev.product.dao.repository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-import vn.smartdev.product.services.SendEmailServices;
 
-/**
- * Created by Nhat on 27/12/2016.
- */
 public class SendEmail {
     private String from;
     private String subjectOrder;

@@ -27,9 +27,6 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Nhat on 28/12/2016.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class ProductManagerImplTest extends HandlingEmulatorData {
     //initialized object

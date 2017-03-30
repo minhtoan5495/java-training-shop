@@ -14,9 +14,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
 
-/**
- * Created by Nhat on 28/12/2016.
- */
 public interface ProductImageManager {
     List<ProductImage> getListProductImage() throws ProductImageNotFoundException;
 

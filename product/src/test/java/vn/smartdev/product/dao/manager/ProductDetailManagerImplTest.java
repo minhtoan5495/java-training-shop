@@ -22,9 +22,6 @@ import vn.smartdev.product.handlingData.HandlingEmulatorData;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 28/12/2016.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class ProductDetailManagerImplTest extends HandlingEmulatorData {
 

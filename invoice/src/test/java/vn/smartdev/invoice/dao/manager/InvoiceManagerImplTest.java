@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by nxmt on 23/12/2016.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class InvoiceManagerImplTest {
     @InjectMocks

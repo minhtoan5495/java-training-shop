@@ -21,10 +21,6 @@ import vn.smartdev.user.services.UserService;
 import java.text.ParseException;
 import java.util.List;
 
-/**
- * Created by levuhuy on 11/29/16.
- */
-
 @Controller
 @RequestMapping(value = "/admin")
 public class UserController {

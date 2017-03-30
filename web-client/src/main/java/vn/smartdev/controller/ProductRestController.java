@@ -11,9 +11,6 @@ import vn.smartdev.product.services.ProductServices;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 08/12/2016.
- */
 @RestController
 @RequestMapping(value="/")
 public class ProductRestController {

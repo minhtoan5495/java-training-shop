@@ -7,10 +7,6 @@ import javax.persistence.*;
 import java.util.UUID;
 
 
-/**
- * The persistent class for the category database table.
- * 
- */
 @Entity
 @Table(name = "category")
 @NamedQuery(name="Category.findAll", query="SELECT c FROM Category c")

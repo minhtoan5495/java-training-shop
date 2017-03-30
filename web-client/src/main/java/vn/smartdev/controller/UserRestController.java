@@ -15,9 +15,6 @@
 //
 //import java.util.List;
 //
-///**
-// * Created by levuhuy on 12/8/16.
-// */
 //@RestController
 //@RequestMapping("/api")
 //public class UserRestController {

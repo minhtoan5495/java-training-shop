@@ -27,9 +27,6 @@ import vn.smartdev.product.services.ProductDetailServices;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 29/11/2016.
- */
 @Service
 public class ProductDetailServicesImpl implements ProductDetailServices {
     private static final Logger logger = LoggerFactory.getLogger(ProductDetailServicesImpl.class);

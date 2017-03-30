@@ -8,11 +8,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.UUID;
 
-
-/**
- * The persistent class for the invoice_detail database table.
- *
- */
 @Entity
 @Table(name="invoice_detail")
 public class InvoiceDetail extends AbstractAuditableEntity<String> implements Serializable {

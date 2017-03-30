@@ -13,9 +13,6 @@ import javax.validation.constraints.Size;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by Nhat on 05/12/2016.
- */
 public class ProductModel {
 
     private String productId;

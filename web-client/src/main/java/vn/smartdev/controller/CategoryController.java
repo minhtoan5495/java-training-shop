@@ -12,9 +12,6 @@ import vn.smartdev.category.services.CategoryServices;
 
 import java.util.List;
 
-/**
- * Created by bink on 29-Nov-16.
- */
 @Controller
 @RequestMapping(value = "/admin", method = RequestMethod.GET)
 public class CategoryController {

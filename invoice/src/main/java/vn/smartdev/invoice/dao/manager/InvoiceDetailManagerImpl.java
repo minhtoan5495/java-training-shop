@@ -2,6 +2,7 @@ package vn.smartdev.invoice.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vn.smartdev.invoice.dao.entity.Invoice;
 import vn.smartdev.invoice.dao.entity.InvoiceDetail;
 import vn.smartdev.invoice.dao.repository.InvoiceDetailRepository;
@@ -9,10 +10,7 @@ import vn.smartdev.invoice.dao.repository.InvoiceDetailRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by nxmt on 26/12/2016.
- */
-@Component
+@Service
 public class InvoiceDetailManagerImpl implements InvoiceDetailManager{
 
     @Autowired

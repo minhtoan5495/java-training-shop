@@ -1,20 +1,15 @@
 package vn.smartdev.product.handlingData;
 
-import jdk.nashorn.internal.objects.NativeRegExp;
 import vn.smartdev.category.dao.entity.Category;
 import vn.smartdev.product.dao.entity.Product;
 import vn.smartdev.product.dao.entity.ProductDetail;
 import vn.smartdev.product.dao.entity.ProductImage;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Nhat on 29/11/2016.
- */
 public class HandlingEmulatorData {
     //1.Emulator Product And Category
 

@@ -27,17 +27,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Handles requests for the application home page.
- */
-
-
 @Controller
 @RequestMapping(value = "/")
 public class HomeController {
 
 	@Autowired
-	UserManager userManager;
+	private UserManager userManager;
 	@Autowired
 	private ProductServices productServices;
 	@Autowired

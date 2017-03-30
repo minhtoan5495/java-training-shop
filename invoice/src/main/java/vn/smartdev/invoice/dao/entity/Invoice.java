@@ -1,20 +1,14 @@
 package vn.smartdev.invoice.dao.entity;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotBlank;
 import vn.smartdev.core.jpa.auditing.AbstractAuditableEntity;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 
-/**
- * The persistent class for the invoice database table.
- *
- */
 @Entity
 @Table(name="invoice")
 public class Invoice extends AbstractAuditableEntity<String> implements Serializable {

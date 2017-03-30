@@ -5,9 +5,6 @@ import vn.smartdev.invoice.exception.InvoiceNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by nxmt on 26/12/2016.
- */
 public interface InvoiceManager {
     List<Invoice> findAll() throws Exception;
     Invoice findById(String id) throws InvoiceNotFoundException;

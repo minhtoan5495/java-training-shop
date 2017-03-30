@@ -2,10 +2,8 @@ package vn.smartdev.category.dao.model;
 
 import java.io.Serializable;
 
-/**
- * Created by XuanVinh on 12/28/2016.
- */
 public class CategoryModel implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id;
     private String name;
 

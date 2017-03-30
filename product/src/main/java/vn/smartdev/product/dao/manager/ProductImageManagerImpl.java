@@ -2,6 +2,7 @@ package vn.smartdev.product.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import vn.smartdev.product.dao.entity.Product;
 import vn.smartdev.product.dao.entity.ProductImage;
@@ -15,10 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
 
-/**
- * Created by Nhat on 26/12/2016.
- */
-@Component
+@Service
 public class ProductImageManagerImpl implements ProductImageManager{
     @Autowired
     private ProductImageRepository productImageRepository;

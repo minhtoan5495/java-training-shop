@@ -6,9 +6,6 @@ import vn.smartdev.category.dao.entity.Category;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 28/11/2016.
- */
 @Repository
 public interface CategoryRepository extends JpaRepository<Category,String>{
 }

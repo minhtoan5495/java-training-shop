@@ -22,9 +22,6 @@ import vn.smartdev.product.services.ProductServices;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- * Created by Nhat on 01/12/2016.
- */
 @Controller
 @RequestMapping(value = "/admin")
 @Transactional

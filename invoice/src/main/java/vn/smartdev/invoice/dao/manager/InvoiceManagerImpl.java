@@ -2,15 +2,13 @@ package vn.smartdev.invoice.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vn.smartdev.invoice.dao.entity.Invoice;
 import vn.smartdev.invoice.dao.repository.InvoiceRepository;
 
 import java.util.List;
 
-/**
- * Created by nxmt on 26/12/2016.
- */
-@Component
+@Service
 public class InvoiceManagerImpl implements InvoiceManager {
 
     @Autowired

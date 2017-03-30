@@ -24,9 +24,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
 
-/**
- * Created by Nhat on 03/12/2016.
- */
 @Service
 public class ProductImageServicesImpl implements ProductImageServices {
     private static final Logger logger = LoggerFactory.getLogger(ProductImageServicesImpl.class);

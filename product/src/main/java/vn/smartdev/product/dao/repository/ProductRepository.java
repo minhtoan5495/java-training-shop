@@ -5,8 +5,5 @@ import org.springframework.stereotype.Repository;
 import vn.smartdev.category.dao.entity.Category;
 import vn.smartdev.product.dao.entity.Product;
 
-/**
- * Created by Nhat on 29/11/2016.
- */
 public interface ProductRepository extends JpaRepository<Product,String>{
 }

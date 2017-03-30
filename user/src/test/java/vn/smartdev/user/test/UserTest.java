@@ -24,9 +24,6 @@
 //import java.sql.Date;
 //
 //
-///**
-// * Created by levuhuy on 11/29/16.
-// */
 //@RunWith(MockitoJUnitRunner.class)
 //public class UserTest {
 //

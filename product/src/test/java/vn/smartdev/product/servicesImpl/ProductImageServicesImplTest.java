@@ -19,9 +19,6 @@
 //
 //import java.util.List;
 //
-///**
-// * Created by Nhat on 26/12/2016.
-// */
 //@RunWith(MockitoJUnitRunner.class)
 //public class ProductImageServicesImplTest extends HandlingEmulatorData {
 //    //initialized object

@@ -2,16 +2,14 @@ package vn.smartdev.product.dao.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import vn.smartdev.product.dao.entity.Discount;
 import vn.smartdev.product.dao.entity.Product;
 import vn.smartdev.product.dao.repository.DiscountRepository;
 
 import java.util.List;
 
-/**
- * Created by Nhat on 28/12/2016.
- */
-@Component
+@Service
 public class DiscountManagerImpl implements DiscountManager {
     @Autowired
     DiscountRepository discountRepository;

@@ -13,9 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Nguyen on 30/11/2016.
- */
 public class PrepareInvoice {
     protected static Map<String, Invoice> prepareListInvoice(int number){
         Map<String, Invoice> prepareInvoice = new HashMap<String, Invoice>();

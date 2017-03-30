@@ -6,9 +6,6 @@ import vn.smartdev.invoice.exception.InvoiceDetailNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by nxmt on 26/12/2016.
- */
 public interface InvoiceDetailManager {
     List<InvoiceDetail> getAll() throws Exception;
     void save(InvoiceDetail invoiceDetail) throws Exception ;

@@ -1,9 +1,8 @@
 package vn.smartdev.product.exception;
 
-/**
- * Created by nhatnguyen on 30/12/2016.
- */
 public class UploadFileFailedException  extends Exception{
+    private static final long serialVersionUID = 1L;
+
     public UploadFileFailedException() {
         super();
     }
