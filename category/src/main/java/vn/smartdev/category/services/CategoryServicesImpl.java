@@ -31,6 +31,5 @@ public class CategoryServicesImpl implements CategoryServices {
     @Override
     public void deleteCategory(String id) {
         categoryManager.deleteCategory(id);
-
     }
 }
