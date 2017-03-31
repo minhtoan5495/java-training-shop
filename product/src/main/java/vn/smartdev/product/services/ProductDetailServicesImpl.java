@@ -94,7 +94,7 @@ public class ProductDetailServicesImpl implements ProductDetailServices {
         {
             Category category = categoryManager.getCategory(productModel.getCategoryId());
             //Product
-            Product product = productManager.getProduct(productModel.getProductId());
+            Product product = productManager.getProduct(productModel.getId());
 
             //productDetail
             ProductDetail productDetail = new ProductDetail();

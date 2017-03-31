@@ -129,7 +129,7 @@ public class HomeController {
 		if(discount == null){
 			model.addAttribute("discount",0);
 		}else {
-			model.addAttribute("discount",discount.getDiscount());
+			model.addAttribute("discount",discount.getPercent());
 		}
 		model.addAttribute("serverTime", formattedDate);
 		model.addAttribute("productDetail",productDetail);

@@ -21,10 +21,10 @@ public class DiscountModel implements Serializable {
 
     private Date endDate;
 
-    private int discount;
+    private int percent;
 
     //	bi-directional many-to-one association to Category
-    private String productId;
+    private String product_id;
 
     public DiscountModel() {
     }
@@ -45,19 +45,23 @@ public class DiscountModel implements Serializable {
         this.endDate = endDate;
     }
 
-    public int getDiscount() {
-        return this.discount;
-    }
+ 
 
-    public void setDiscount(int discount) {
-        this.discount = discount;
-    }
+    public int getPercent() {
+		return percent;
+	}
 
-    public String getProductId() {
-        return productId;
-    }
+	public void setPercent(int percent) {
+		this.percent = percent;
+	}
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
+	public String getProduct_id() {
+		return product_id;
+	}
+
+	public void setProduct_id(String product_id) {
+		this.product_id = product_id;
+	}
+
+	
 }

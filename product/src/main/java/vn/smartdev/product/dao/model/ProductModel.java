@@ -15,7 +15,7 @@ import java.util.Properties;
 
 public class ProductModel {
 
-    private String productId;
+    private String id;
 
     @NotBlank
     @Size(min = 2,max = 50)
@@ -63,15 +63,21 @@ public class ProductModel {
         this.urlImage = prop.getProperty("local.imagesUpload.directory");
     }
 
-    public String getProductId() {
-        return productId;
-    }
+  
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
+    public String getId() {
+		return id;
+	}
 
-    public String getCategoryId() {
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+
+	public String getCategoryId() {
         return categoryId;
     }
 

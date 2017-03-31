@@ -1,0 +1,147 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<changeSet id="1481620089366-35" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createTable tableName="discount">
+			<column name="discount_id" type="VARCHAR(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="percent" type="INT(20)"></column>
+			<column name="startdate" type="DATE"></column>
+			<column name="enddate" type="DATE"></column>
+             <column name="created_date" type="date"/>
+            <column name="last_updated_date" type="date"/>
+            <column name="created_by_person" type="VARCHAR(255)"/>
+            <column name="last_updated_by_person" type="VARCHAR(255)"/>
+            <column name="product_id" type="VARCHAR(45)"></column>
+		</createTable>
+	</changeSet>
+	<changeSet id="1481620089366-36" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createTable tableName="rating">
+			<column name="rating_id" type="VARCHAR(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="number_rating" type="INT(45)"></column>
+			<column name="comment_content" type="TEXT"></column>
+			      <column name="created_date" type="date"/>
+            <column name="last_updated_date" type="date"/>
+            <column name="created_by_person" type="VARCHAR(255)"/>
+            <column name="last_updated_by_person" type="VARCHAR(255)"/>
+            <column name="product_id" type="VARCHAR(45)"></column>
+            <column name="username" type="VARCHAR(45)"></column>
+		</createTable>
+	</changeSet>
+	<changeSet id="1481620089366-37" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createTable tableName="auction">
+			<column name="auction_id" type="VARCHAR(45)">
+			   <constraints nullable="false"/>
+			</column>
+			<column name="start_time" type="DATE"></column>
+			<column name="end_time" type="DATE"></column>
+			<column name="status_auction" type="TEXT"></column>
+			<column name="product_id" type="VARCHAR(45)"></column>
+			     <column name="created_date" type="date"/>
+            <column name="last_updated_date" type="date"/>
+            <column name="created_by_person" type="VARCHAR(255)"/>
+            <column name="last_updated_by_person" type="VARCHAR(255)"/>
+		</createTable>
+	</changeSet>
+	<changeSet id="1481620089366-38" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createTable tableName="user_auction">
+			<column name="user_auction_id" type="VARCHAR(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="bidtime" type="DATE"></column>
+			<column name="price" type="DOUBLE"></column>
+			<column name="username" type="VARCHAR(45)"></column>
+			<column name="auction_id" type="VARCHAR(45)"></column>
+				    <column name="created_date" type="date"/>
+            <column name="last_updated_date" type="date"/>
+            <column name="created_by_person" type="VARCHAR(255)"/>
+            <column name="last_updated_by_person" type="VARCHAR(255)"/>
+		</createTable>
+	</changeSet>
+	<changeSet id="1481620089366-39" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createTable tableName="images">
+			<column name="images_id" type="VARCHAR(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="file_name" type="VARCHAR(255)"></column>
+			<column name="file_data" type="LONGBLOB"></column>
+			    <column name="created_date" type="date"/>
+            <column name="last_updated_date" type="date"/>
+            <column name="created_by_person" type="VARCHAR(255)"/>
+            <column name="last_updated_by_person" type="VARCHAR(255)"/>
+		</createTable>
+	</changeSet>
+	<changeSet id="1481620089366-40" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addPrimaryKey columnNames="discount_id" constraintName="PRIMARY" tableName="discount"/>
+	</changeSet>
+	<changeSet id="1481620089366-41" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addPrimaryKey columnNames="rating_id" constraintName="PRIMARY" tableName="rating"/>
+	</changeSet>
+	<changeSet id="1481620089366-42" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addPrimaryKey columnNames="auction_id" constraintName="PRIMARY" tableName="auction"/>
+	</changeSet>
+	<changeSet id="1481620089366-43" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addPrimaryKey columnNames="user_auction_id" constraintName="PRIMARY" tableName="user_auction"/>
+	</changeSet>
+	<changeSet id="1481620089366-44" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addPrimaryKey columnNames="images_id" constraintName="PRIMARY" tableName="images"/>
+	</changeSet>
+	<changeSet id="1481620089366-45" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="discount" indexName="fk_discount_product">
+			<column name="product_id"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-46" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="rating" indexName="fk_rating_product">
+			<column name="product_id"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-47" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="rating" indexName="fk_rating_user">
+			<column name="username"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-48" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="auction" indexName="fk_auction_product">
+			<column name="product_id"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-49" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="user_auction" indexName="fk_user_auction">
+			<column name="username"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-50" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="user_auction" indexName="fk_auction_detail">
+			<column name="auction_id"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-51" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<createIndex tableName="product" indexName="fk_product_images">
+			<column name="images_id"></column>
+		</createIndex>
+	</changeSet>
+	<changeSet id="1481620089366-52" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="product_id" baseTableName="discount" constraintName="FKexqqeaksnmmku5py194ywp141" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="product_id" referencedTableName="product"/>
+	</changeSet>
+	<changeSet id="1481620089366-53" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="product_id" baseTableName="auction" constraintName="fk_auction_product" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="product_id" referencedTableName="product"/>
+	</changeSet>
+	<changeSet id="1481620089366-54" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="product_id" baseTableName="rating" constraintName="fk_rating_product" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="product_id" referencedTableName="product"/>
+	</changeSet>
+	<changeSet id="1481620089366-55" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="username" baseTableName="rating" constraintName="fk_rating-user" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="username" referencedTableName="user"/>
+	</changeSet>
+	<changeSet id="1481620089366-56" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="username" baseTableName="user_auction" constraintName="fk_user_auction" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="username" referencedTableName="user"/>
+	</changeSet>
+	<changeSet id="1481620089366-57" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="auction_id" baseTableName="user_auction" constraintName="fk_user_auction_auction" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="auction_id" referencedTableName="auction"/>
+	</changeSet>
+	<changeSet id="1481620089366-58" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<addForeignKeyConstraint baseColumnNames="images_id" baseTableName="product" constraintName="fk_product_images" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="images_id" referencedTableName="images"/>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,87 @@
+<!-- <?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<changeSet id="1481620089366-59" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="1"></column>
+			<column name="category_name" value="CÔNG NGHỆ"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-60" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="2"></column>
+			<column name="category_name" value="THỜI TRANG"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-61" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="3"></column>
+			<column name="category_name" value="ĐỒNG HỒ"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-62" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="4"></column>
+			<column name="category_name" value="SỨC KHỎE SẮC ĐẸP"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-63" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="5"></column>
+			<column name="category_name" value="TRANG SỨC"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-64" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="6"></column>
+			<column name="category_name" value="GIÀY DÉP"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+	<changeSet id="1481620089366-65" author="Son (generated)" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+		<insert tableName="category">
+			<column name="id" value="7"></column>
+			<column name="category_name" value="ĐỒ TRẺ EM"></column>
+			<column name="created" value="2017-03-30"></column>
+			<column name="last_updated" value="2017-03-30"></column>
+			<column name="created_by" value="maison"></column>
+			<column name="deleted" value="1"></column>
+			<column name="versionNo" value="01"></column>
+			<column name="last_updated_by" value="maison"></column>
+		</insert>
+	</changeSet>
+</databaseChangeLog> -->
