@@ -16,46 +16,31 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class AbstractAuditableEntity <PK extends Serializable> implements Serializable {
 
-    @Id
-    private PK id;
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_date")
     private Date created;
+
     @LastModifiedDate
-    @Column(name = "last_updated")
+    @Column(name = "last_updated_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastUpdated;
 
     @CreatedBy
-    @Column(name = "created_by")
+    @Column(name = "created_by_person")
     private String createBy;
     @LastModifiedBy
-    @Column(name = "last_updated_by")
+    @Column(name = "last_updated_by_person")
     private String lastUpdatedBy;
-
-    @Version
-    private Integer versionNo;
-    private boolean deleted;
 
     @Override
     public String toString() {
         return "AbstractAuditableEntity{" +
-                "id=" + id +
                 ", created=" + created +
                 ", lastUpdated=" + lastUpdated +
                 ", createBy='" + createBy + '\'' +
                 ", lastUpdatedBy='" + lastUpdatedBy + '\'' +
-                ", versionNo=" + versionNo +
-                ", deleted=" + deleted +
                 '}';
-    }
-
-    public PK getId() {
-        return id;
-    }
-
-    public void setId(PK id) {
-        this.id = id;
     }
 
     public Date getCreated() {
@@ -81,18 +66,6 @@ public class AbstractAuditableEntity <PK extends Serializable> implements Serial
     }
     public void setLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
-    }
-    public Integer getVersionNo() {
-        return versionNo;
-    }
-    public void setVersionNo(Integer versionNo) {
-        this.versionNo = versionNo;
-    }
-    public boolean isDeleted() {
-        return deleted;
-    }
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
     }
 
 

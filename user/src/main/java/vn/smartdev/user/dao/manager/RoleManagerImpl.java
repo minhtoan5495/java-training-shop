@@ -22,7 +22,7 @@ public class RoleManagerImpl implements RoleManager {
     }
 
     @Override
-    public Role findRoleByName(String rolename) throws RoleNotFoundException {
-        return roleRepository.findOne(rolename);
+    public Role findRoleByName(String roleName) throws RoleNotFoundException {
+        return roleRepository.findOne(roleName);
     }
 }

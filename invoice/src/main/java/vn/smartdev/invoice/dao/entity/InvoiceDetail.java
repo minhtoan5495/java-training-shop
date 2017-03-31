@@ -11,7 +11,11 @@ import java.util.UUID;
 @Entity
 @Table(name="invoice_detail")
 public class InvoiceDetail extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1026293320939046654L;
+
+	@Id
+	@Column(name = "invoice_detail_id")
+	private String id;
 
 	@Column(name = "discount")
 	private int discount;
@@ -72,5 +76,13 @@ public class InvoiceDetail extends AbstractAuditableEntity<String> implements Se
 
 	public void setDiscount(int discount) {
 		this.discount = discount;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

@@ -1,3 +1,4 @@
+/*
 package vn.smartdev.user.services;
 
 import org.fest.assertions.Assertions;
@@ -20,9 +21,11 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Created by levuhuy on 12/26/16.
- */
+ *//*
+
 public class UserServiceImplTest {
     @InjectMocks
     private UserServiceImpl userServiceIml;
@@ -48,7 +51,7 @@ public class UserServiceImplTest {
                 , true, true, true
                 , true, new Role("ROLE_ADMIN"));
 
-    Mockito.when(userManager.findUserByUsername("Huy")).thenReturn(user);
+        Mockito.when(userManager.findUserByUsername("Huy")).thenReturn(user);
 
 
         User result = userServiceIml.findUserByUsernameService("Huy");
@@ -157,4 +160,4 @@ public class UserServiceImplTest {
         }
         return users;
     }
-}
+}*/

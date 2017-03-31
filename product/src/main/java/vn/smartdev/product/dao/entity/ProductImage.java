@@ -17,7 +17,11 @@ import java.util.UUID;
 @Table(name="product_images")
 @NamedQuery(name="ProductImage.findAll", query="SELECT p FROM ProductImage p")
 public class ProductImage extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -6589694588440563336L;
+
+	@Id
+	@Column(name = "product_images_id")
+	private String id;
 
 	@Lob
 	private String url;
@@ -52,4 +56,11 @@ public class ProductImage extends AbstractAuditableEntity<String> implements Ser
 		this.productDetail = productDetail;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 }

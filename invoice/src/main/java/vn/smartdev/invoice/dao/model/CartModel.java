@@ -5,10 +5,7 @@ import vn.smartdev.product.dao.entity.ProductDetail;
 import java.io.Serializable;
 
 public class CartModel implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2949695407943156877L;
 	private ProductDetail productDetail;
 	private int quantity;
 	private int discount;

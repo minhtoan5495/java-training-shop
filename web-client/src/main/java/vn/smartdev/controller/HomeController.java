@@ -27,12 +27,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+
 @Controller
 @RequestMapping(value = "/")
 public class HomeController {
 
 	@Autowired
-	private UserManager userManager;
+	UserManager userManager;
 	@Autowired
 	private ProductServices productServices;
 	@Autowired

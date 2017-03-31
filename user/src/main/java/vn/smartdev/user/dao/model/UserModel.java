@@ -1,18 +1,16 @@
 package vn.smartdev.user.dao.model;
 
 
-import vn.smartdev.core.jpa.auditing.AbstractAuditableEntity;
-import vn.smartdev.user.dao.validator.Phone;
 import vn.smartdev.user.dao.validator.Email;
+import vn.smartdev.user.dao.validator.Phone;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.UUID;
 
-public class UserModel extends AbstractAuditableEntity<String> implements Serializable {
+public class UserModel implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 19933909136649362L;
 
 
     @NotNull
@@ -71,7 +69,6 @@ public class UserModel extends AbstractAuditableEntity<String> implements Serial
         this.phone = phone;
         this.username = username;
         this.confirmPassword = confirmPassword;
-        setId(UUID.randomUUID().toString());
     }
 
     public String getEmail() {

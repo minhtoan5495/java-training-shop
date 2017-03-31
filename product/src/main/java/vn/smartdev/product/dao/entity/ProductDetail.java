@@ -19,7 +19,11 @@ import java.util.UUID;
 @Table(name="product_detail")
 @NamedQuery(name="ProductDetail.findAll", query="SELECT p FROM ProductDetail p")
 public class ProductDetail extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6479607606156289524L;
+
+	@Id
+	@Column(name = "product_detail_id")
+	private String id;
 
 	private String description;
 
@@ -34,10 +38,8 @@ public class ProductDetail extends AbstractAuditableEntity<String> implements Se
 
 	@Column(name="product_detail_status")
 	private int productDetailStatus;
-	//contrustor
 
 	private String supplyer;
-	//contrustor
 
 	public ProductDetail(String productDetailName, String description, float productDetailPrice, int productDetailQuantity, int productDetailStatus,String supplyer) {
 		this.productDetailName = productDetailName;
@@ -47,11 +49,6 @@ public class ProductDetail extends AbstractAuditableEntity<String> implements Se
 		this.productDetailStatus = productDetailStatus;
 		this.supplyer = supplyer;
 	}
-
-
-	/*//bi-directional many-to-one association to OrderDetail
-	@OneToMany(mappedBy="productDetail")
-	private List<OrderDetail> orderDetails;*/
 
 	//bi-directional many-to-one association to Product
 	@ManyToOne(fetch=FetchType.EAGER)
@@ -116,27 +113,6 @@ public class ProductDetail extends AbstractAuditableEntity<String> implements Se
 		this.supplyer = supplyer;
 	}
 
-	/*public List<OrderDetail> getOrderDetails() {
-		return this.orderDetails;
-	}
-
-	public void setOrderDetails(List<OrderDetail> orderDetails) {
-		this.orderDetails = orderDetails;
-	}
-
-	public OrderDetail addOrderDetail(OrderDetail orderDetail) {
-		getOrderDetails().add(orderDetail);
-		orderDetail.setProductDetail(this);
-
-		return orderDetail;
-	}
-
-	public OrderDetail removeOrderDetail(OrderDetail orderDetail) {
-		getOrderDetails().remove(orderDetail);
-		orderDetail.setProductDetail(null);
-
-		return orderDetail;
-	}*/
 
 	public Product getProduct() {
 		return this.product;
@@ -154,18 +130,12 @@ public class ProductDetail extends AbstractAuditableEntity<String> implements Se
 		this.productImages = productImages;
 	}
 
-	public ProductImage addProductImage(ProductImage productImage) {
-		getProductImages().add(productImage);
-		productImage.setProductDetail(this);
-
-		return productImage;
+	public String getId() {
+		return id;
 	}
 
-	public ProductImage removeProductImage(ProductImage productImage) {
-		getProductImages().remove(productImage);
-		productImage.setProductDetail(null);
-
-		return productImage;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

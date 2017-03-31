@@ -15,7 +15,7 @@ import java.util.UUID;
  * The persistent class for the discount database table.
  */
 public class DiscountModel implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 5514017270108720979L;
 
     private Date startDate;
 

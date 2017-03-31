@@ -22,7 +22,11 @@ import java.util.UUID;
 @Table(name = "product")
 @NamedQuery(name="Product.findAll", query="SELECT p FROM Product p")
 public class Product extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1696899862577234438L;
+
+	@Id
+	@Column(name = "product_id")
+	private String id;
 
 	@Column(name="product_name")
 	private String productName;
@@ -91,17 +95,11 @@ public class Product extends AbstractAuditableEntity<String> implements Serializ
 		this.productDetails = productDetails;
 	}
 
-	public ProductDetail addProductDetail(ProductDetail productDetail) {
-		getProductDetails().add(productDetail);
-		productDetail.setProduct(this);
-
-		return productDetail;
+	public String getId() {
+		return id;
 	}
 
-	public ProductDetail removeProductDetail(ProductDetail productDetail) {
-		getProductDetails().remove(productDetail);
-		productDetail.setProduct(null);
-
-		return productDetail;
+	public void setId(String id) {
+		this.id = id;
 	}
 }

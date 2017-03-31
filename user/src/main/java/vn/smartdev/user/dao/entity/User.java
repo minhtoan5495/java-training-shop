@@ -16,8 +16,11 @@ import java.util.UUID;
 @Table(name = "user")
 @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
 public class User extends AbstractAuditableEntity<String> implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -921467404840123028L;
 
+    @Id
+    @Column(name = "user_id")
+    private String id;
 
     private String address;
 
@@ -38,21 +41,15 @@ public class User extends AbstractAuditableEntity<String> implements Serializabl
 
     private String username;
 
-    @Column(name = "enabled")
-    private boolean enabled;
-    @Column(name = "account_non_expired")
-    private boolean accountNonExpired;
     @Column(name = "account_non_locked")
     private boolean accountNonLocked;
-    @Column(name = "credentials_non_expired")
-    private boolean credentialsNonExpired;
 
     //bi-directional many-to-many association to Role
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Role.class)
     @JoinTable(
             name = "role_user"
             , joinColumns = {
-            @JoinColumn(name = "user_id", referencedColumnName = "id")
+            @JoinColumn(name = "username", referencedColumnName = "username")
     }
 
             , inverseJoinColumns = {
@@ -70,10 +67,6 @@ public class User extends AbstractAuditableEntity<String> implements Serializabl
     }
 
     public User() {
-        setId(UUID.randomUUID().toString());
-    }
-
-    public User(String address, Date birthday, String email, String password, String phone, String huy, boolean enabled, boolean accountNonExpired, boolean accountNonLocked, boolean credentialsNonExpired, Role admin) {
         setId(UUID.randomUUID().toString());
     }
 
@@ -137,35 +130,19 @@ public class User extends AbstractAuditableEntity<String> implements Serializabl
         this.roles = roles;
     }
 
-    public void setAccountNonExpired(boolean accountNonExpired) {
-        this.accountNonExpired = accountNonExpired;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
     public void setAccountNonLocked(boolean accountNonLocked) {
         this.accountNonLocked = accountNonLocked;
-    }
-
-    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-        this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public boolean isAccountNonExpired() {
-        return accountNonExpired;
     }
 
     public boolean isAccountNonLocked() {
         return accountNonLocked;
     }
 
-    public boolean isCredentialsNonExpired() {
-        return credentialsNonExpired;
+    public String getId() {
+        return id;
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public void setId(String id) {
+        this.id = id;
     }
 }

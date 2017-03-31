@@ -3,16 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jee="http://www.springframework.org/schema/jee"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
     http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
 
+    <tx:annotation-driven/>
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="vn.smartdev.*.dao.entity"/>
+        <property name="packagesToScan">
+            <list>
+                <value>vn.smartdev.user.dao.entity.*</value>
+                <value>vn.smartdev.product.dao.entity.*</value>
+                <value>vn.smartdev.category.dao.entity.*</value>
+                <value>vn.smartdev.invoice.dao.entity.*</value>
+            </list>
+        </property>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="generateDdl" value="false"></property>
@@ -21,14 +27,14 @@
         </property>
         <property name="jpaProperties">
             <props>
-                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
         </property>
     </bean>
     <!-- temporary add datasource for test -->
-      <bean id="dataSource"
+    <!--<bean id="dataSource"
 			class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 			<property name="driverClassName"
 				value="com.mysql.jdbc.Driver" />
@@ -36,13 +42,16 @@
 				value="jdbc:mysql://localhost:3306/auction" />
 			<property name="username" value="root" />
 			<property name="password" value="123456" />
-		</bean>
+    </bean>-->
+    <jee:jndi-lookup id="dataSource" jndi-name="jdbc/java-training-shop-dev_db"/>
     <bean id="savedRequestAwareAuthenticationSuccessHandler"
           class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
         <property name="targetUrlParameter" value="targetUrl" />
     </bean>
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        <property name="jpaDialect" ref="jpaDialect"/>
     </bean>
-    <tx:annotation-driven/>
+    <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+
 </beans>

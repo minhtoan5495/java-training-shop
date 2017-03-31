@@ -11,9 +11,12 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Properties;
 
-public class ProductModel {
+public class ProductModel implements Serializable {
+
+    private static final long serialVersionUID = -4761860909693839235L;
 
     private String id;
 

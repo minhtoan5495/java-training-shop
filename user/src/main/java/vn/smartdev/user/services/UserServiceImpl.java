@@ -80,10 +80,7 @@ public class UserServiceImpl implements UserService {
         user.setBirthday(userModel.getBirthday());
         roles.add(role);
         user.setRoles(roles);
-        user.setEnabled(true);
-        user.setAccountNonExpired(true);
         user.setAccountNonLocked(true);
-        user.setCredentialsNonExpired(true);
         try {
             userManager.save(user);
         } catch (UserAlreadyExistsException e) {

@@ -1,28 +1,26 @@
 package vn.smartdev.user.dao.entity;
 
+import org.springframework.context.annotation.ComponentScan;
 import vn.smartdev.core.jpa.auditing.AbstractAuditableEntity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-
-/**
- * The persistent class for the role database table.
- * 
- */
 @Entity
+@ComponentScan("vn.smartdev.user.dao.entity")
 @Table(name = "role")
 @NamedQuery(name="Role.findAll", query="SELECT r FROM Role r")
 public class Role extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -3689385809431359190L;
+
+	@Id
+	@Column(name = "role_id")
+	private String id;
 
 	@Column(name="role_name")
 	private String roleName;
-
-	private boolean deleted;
 
 	public Role(String roleName) {
 		this.roleName = roleName;
@@ -40,14 +38,6 @@ public class Role extends AbstractAuditableEntity<String> implements Serializabl
 		return this.roleName;
 	}
 
-    public boolean getDeleted() {
-        return deleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
-    }
-
     public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
@@ -61,4 +51,11 @@ public class Role extends AbstractAuditableEntity<String> implements Serializabl
 		this.users = users;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 }

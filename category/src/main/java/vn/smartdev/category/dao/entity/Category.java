@@ -11,7 +11,11 @@ import java.util.UUID;
 @Table(name = "category")
 @NamedQuery(name="Category.findAll", query="SELECT c FROM Category c")
 public class Category extends AbstractAuditableEntity<String> implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 3401746015469813185L;
+
+	@Id
+	@Column(name = "category_id")
+	private String id;
 
 	@Column(name="category_name")
 	private String categoryName;
@@ -36,8 +40,7 @@ public class Category extends AbstractAuditableEntity<String> implements Seriali
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.getClass().getName() + "-");
-		sb.append("  id=" + getId());
-		sb.append("  id=" + getCategoryName());
+		sb.append("  categoryName=" + getCategoryName());
 		sb.append("  lastUpdated=" + getLastUpdated());
 		sb.append("  lastUpdateBy=" + getLastUpdatedBy());
 		sb.append("  created=" + getCreated());
@@ -45,4 +48,11 @@ public class Category extends AbstractAuditableEntity<String> implements Seriali
 		return sb.toString();
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 }

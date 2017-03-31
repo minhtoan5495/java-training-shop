@@ -1,6 +1,10 @@
 package vn.smartdev.product.dao.model;
 
-public class ProductDetailModel {
+import java.io.Serializable;
+
+public class ProductDetailModel implements Serializable {
+
+    private static final long serialVersionUID = -8908129857537854852L;
 
     private String id;
 

@@ -13,6 +13,4 @@
     <tx:annotation-driven/>
     <context:component-scan base-package="vn.smartdev.*"/>
     <jpa:repositories base-package="vn.smartdev.invoice.dao.repository"/>
-    <jpa:auditing auditor-aware-ref="auditorAwareIml"/>
-    <bean id="auditorAwareIml" class="vn.smartdev.core.jpa.auditing.AuditorAwareImpl"/>
 </beans>
