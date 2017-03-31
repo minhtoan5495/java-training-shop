@@ -15,7 +15,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "user")
 @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
-public class User extends AbstractAuditableEntity<String> implements Serializable {
+public class User extends AbstractAuditableEntity implements Serializable {
     private static final long serialVersionUID = -921467404840123028L;
 
     @Id

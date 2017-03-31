@@ -10,7 +10,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "category")
 @NamedQuery(name="Category.findAll", query="SELECT c FROM Category c")
-public class Category extends AbstractAuditableEntity<String> implements Serializable {
+public class Category extends AbstractAuditableEntity implements Serializable {
 	private static final long serialVersionUID = 3401746015469813185L;
 
 	@Id

@@ -18,7 +18,7 @@ import java.util.UUID;
 @Entity
 @Table(name="product_detail")
 @NamedQuery(name="ProductDetail.findAll", query="SELECT p FROM ProductDetail p")
-public class ProductDetail extends AbstractAuditableEntity<String> implements Serializable {
+public class ProductDetail extends AbstractAuditableEntity implements Serializable {
 	private static final long serialVersionUID = 6479607606156289524L;
 
 	@Id

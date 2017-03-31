@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name="invoice_detail")
-public class InvoiceDetail extends AbstractAuditableEntity<String> implements Serializable {
+public class InvoiceDetail implements Serializable {
 	private static final long serialVersionUID = -1026293320939046654L;
 
 	@Id

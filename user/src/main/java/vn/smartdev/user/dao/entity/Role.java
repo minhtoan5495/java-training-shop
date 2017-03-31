@@ -12,7 +12,7 @@ import java.util.UUID;
 @ComponentScan("vn.smartdev.user.dao.entity")
 @Table(name = "role")
 @NamedQuery(name="Role.findAll", query="SELECT r FROM Role r")
-public class Role extends AbstractAuditableEntity<String> implements Serializable {
+public class Role extends AbstractAuditableEntity implements Serializable {
 	private static final long serialVersionUID = -3689385809431359190L;
 
 	@Id

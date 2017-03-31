@@ -16,7 +16,7 @@ import java.util.UUID;
 @Entity
 @Table(name="product_images")
 @NamedQuery(name="ProductImage.findAll", query="SELECT p FROM ProductImage p")
-public class ProductImage extends AbstractAuditableEntity<String> implements Serializable {
+public class ProductImage extends AbstractAuditableEntity implements Serializable {
 	private static final long serialVersionUID = -6589694588440563336L;
 
 	@Id
